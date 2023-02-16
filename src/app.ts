@@ -1,5 +1,5 @@
 import express from "express";
-import { ServerError } from "./errors";
+import { NotFoundError, ServerError } from "./errors";
 import { measureRequests } from "./middleware";
 import { exampleRouter } from "./routes";
 
@@ -14,6 +14,7 @@ export const loadApp = (): Express.Application => {
 
 	app.use(exampleRouter);
 
+	app.use(NotFoundError);
 	app.use(ServerError);
 
 	return app;
