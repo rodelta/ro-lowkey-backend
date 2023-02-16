@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "esModuleInterop": true,
+        "moduleResolution": "node",
+        "module": "CommonJS",
+        "target": "es2019",
+        "outDir": "dist",
+        "rootDir": "./src",
+        "strict": true,
+        "allowUnreachableCode": false,
+        "allowUnusedLabels": false,
+        "exactOptionalPropertyTypes": true
+    },
+
+    "include": ["./src/**/*"],
+    "exclude": ["./coverage", "./dist", "node_modules"]
+}
