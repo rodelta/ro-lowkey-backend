@@ -7,6 +7,9 @@ export interface ExampleJSONResponse {
 	number: number;
 }
 
+/**
+ * Simple controller, as a placeholder for new ones.
+ */
 export const exampleJSONGet: RequestHandler<never, ExampleJSONResponse> =
 	async (req, res) => {
 		// Do some fancy code stuff

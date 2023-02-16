@@ -2,7 +2,8 @@ import type { jest } from "@jest/globals";
 import type { Response } from "express";
 
 /**
- * Takes a res object, returns the last call of res.json();
+ * from a mocked res object, returns the last call of res.json();
+ * Useful when mocking controllers
  */
 export const getLastJsonCall = <T>(res: Response<T>): T => {
 	const mock = (res.json as jest.Mock<typeof res.json>).mock;

@@ -11,6 +11,7 @@ export const ServerError: ErrorRequestHandler = (err, req, res, next) => {
 	res.status(status).json({ message });
 };
 
+/** Cleans out error output in the terminal */
 export const prettifyErrors = (): void => {
 	import("pretty-error").then((prettyError): void => {
 		prettyError
@@ -25,7 +26,7 @@ export const prettifyErrors = (): void => {
 };
 
 export const setProcessExceptions = (): void => {
-	// Exit conditions and error handling
+	// process exit conditions and error handling
 
 	process.on("SIGINT", () => {
 		console.warn("Server terminated");

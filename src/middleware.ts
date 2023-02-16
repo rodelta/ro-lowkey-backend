@@ -1,7 +1,7 @@
 import { RequestHandler } from "express";
 
 /**
- * Logs requested path and time to response
+ * Middleware to logs requests to the server, with method, path, and time to respond.
  */
 export const measureRequests: RequestHandler = (req, res, next) => {
 	const path = `${req.method} ${req.originalUrl}`;
