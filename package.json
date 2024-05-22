@@ -17,13 +17,14 @@
     "dev": "ts-node-dev --respawn --rs ./src/server",
     "build": "tsc -b .",
     "test": "jest",
-    "lint": "rome check ."
+    "lint": "biome lint ./src"
   },
   "dependencies": {
     "dotenv": "^16.0.3",
     "express": "^4.18.2"
   },
   "devDependencies": {
+    "@biomejs/biome": "^1.7.3",
     "@jest-mock/express": "^2.0.1",
     "@swc/core": "^1.3.35",
     "@swc/jest": "^0.2.24",
