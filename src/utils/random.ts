@@ -6,7 +6,7 @@ import crypto from "crypto";
  * @returns random string
  */
 export const getRandomString = (length = 20): string =>
-	crypto.randomBytes(length).toString("hex").slice(0, length);
+  crypto.randomBytes(length).toString("hex").slice(0, length);
 
 /**
  * Generate random numbers
@@ -15,4 +15,4 @@ export const getRandomString = (length = 20): string =>
  * @returns random int number in range
  */
 export const getRandomNumber = (min: number, max: number): number =>
-	Math.floor(Math.random() * (max - min + 1) + min);
+  Math.floor(Math.random() * (max - min + 1) + min);

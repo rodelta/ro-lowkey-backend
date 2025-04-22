@@ -6,9 +6,9 @@ import type { Response } from "express";
  * Useful when mocking controllers
  */
 export const getLastJsonCall = <T>(res: Response<T>): T => {
-	const mock = (res.json as jest.Mock<typeof res.json>).mock;
+  const mock = (res.json as jest.Mock<typeof res.json>).mock;
 
-	if (!mock.lastCall?.[0])
-		throw new Error("res.json mock does not contain a last call");
-	return mock.lastCall?.[0];
+  if (!mock.lastCall?.[0])
+    throw new Error("res.json mock does not contain a last call");
+  return mock.lastCall?.[0];
 };

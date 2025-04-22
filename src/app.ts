@@ -4,18 +4,18 @@ import { measureRequests } from "./middleware";
 import { exampleRouter } from "./routes";
 
 export const loadApp = (): Express.Application => {
-	console.log("loading app");
+  console.log("loading app");
 
-	const app = express();
-	app.use(express.json());
-	app.use(measureRequests);
+  const app = express();
+  app.use(express.json());
+  app.use(measureRequests);
 
-	app.get("/", (req, res) => res.status(200).send("Server up 🎈"));
+  app.get("/", (req, res) => res.status(200).send("Server up 🎈"));
 
-	app.use(exampleRouter);
+  app.use(exampleRouter);
 
-	app.use(NotFoundError);
-	app.use(ServerError);
+  app.use(NotFoundError);
+  app.use(ServerError);
 
-	return app;
+  return app;
 };
