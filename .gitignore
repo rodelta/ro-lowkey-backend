@@ -1,3 +1,13 @@
+# SO
+*.DS_Store
+
+# Temp files
+logs
+*.log
+*-debug.log*
+.cache/
+.*cache*
+
 # dependencies
 node_modules
 
@@ -11,3 +21,6 @@ coverage
 .env
 .env.*
 !.env.example
+
+# NODE/TS
+*.tsbuildinfo
