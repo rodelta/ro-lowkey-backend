@@ -10,7 +10,9 @@ export const loadApp = (): Express.Application => {
   app.use(express.json());
   app.use(measureRequests);
 
-  app.get("/", (req, res) => res.status(200).send("Server up 🎈"));
+  app.get("/", (req, res) => {
+    res.status(200).send("Server up 🎈");
+  });
 
   app.use(exampleRouter);
 

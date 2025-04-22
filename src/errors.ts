@@ -1,6 +1,8 @@
 import { ErrorRequestHandler, RequestHandler } from "express";
 
-export const NotFoundError: RequestHandler = (_req, res) => res.sendStatus(404);
+export const NotFoundError: RequestHandler = (_req, res) => {
+  res.sendStatus(404);
+};
 
 // Express needs all 4 parameters to recognize it as error handler
 export const ServerError: ErrorRequestHandler = (err, req, res, next) => {
