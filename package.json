@@ -1,14 +1,11 @@
 {
   "name": "ro-lowkey-backend",
   "version": "0.0.1",
-  "description": "Basic backend starter with a clean stroke",
+  "description": "Basic backend starter",
   "private": true,
-  "packageManager": "pnpm@9.1.2",
-  "volta": {
-    "node": "23.6.1"
-  },
+  "packageManager": "pnpm@10.9.0",
   "engines": {
-    "node": "23"
+    "node": ">=22"
   },
   "main": "./dist/server.js",
   "source": "src/server.ts",
